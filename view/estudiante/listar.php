@@ -21,7 +21,7 @@
                         <th><?=$estudiante->getApellido();?></th>
                         <th><?=$estudiante->getEdad();?></th>
                         <th>
-                            <a href="#" class="btn btn-primary">Editar</a>
+                            <a href="index.php?controller=Estudiante&action=editar&cedula=<?=$estudiante->getCedula();?>" class="btn btn-primary">Editar</a>
                             <a href="#" class="btn btn-danger">Eliminar</a>
                         </th>
                     </tr>

@@ -29,7 +29,10 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Listar <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                   <li><a href="#">Estudiantes</a></li>
+                   <li><a href="index.php?controller=Estudiante&action=listar">Estudiantes</a></li>
+                   <li><a href="index.php?controller=Carrera&action=listar">Carreras</a></li>
+                   <li><a href="index.php?controller=Curso&action=listar">Cursos</a></li>
+                   <li><a href="index.php?controller=Profesor&action=listar">Profesores</a></li>
                 </ul>                
               </li>              
             </ul>

@@ -53,6 +53,7 @@ class ConexionBD
     
    public function cerrarConeccion(){
        $this->coneccion->close();
+       $this->coneccion = null;
    }
 }
 ?>
