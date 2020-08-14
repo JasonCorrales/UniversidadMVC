@@ -4,7 +4,7 @@
     </div>
     <div class="col-md-6 col-md-offset-3">
         <div class="form-horizontal" style="">
-            <form action="#" method="post">
+            <form action="index.php?controller=Estudiante&action=registrar" method="post">
                 <div class="form-group">
                     <label class=" col-sm-2 control-label" for="txt_cedula">CEDULA:</label>
                     <div class="col-sm-10">
@@ -34,9 +34,7 @@
                         <input type="submit" class="btn btn-primary form-control" name="" value="registrar">
                     </div>
                 </div>
-            </form>
-            
+            </form>            
         </div>
     </div>
-    
 </div>

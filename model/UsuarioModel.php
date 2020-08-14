@@ -14,7 +14,7 @@ class UsuarioModel {
         
         $this->bd->getConeccion();
         
-        $sql="SELECT * FROM USUARIO WHERE CORREO =$correo AND PASSWORD = $password";        
+        $sql="SELECT * FROM USUARIO WHERE CORREO ='$correo' AND PASSWORD = '$password'";        
         $registros = $this->bd->executeQueryReturnData($sql);  
         $this->bd->cerrarConeccion();
 

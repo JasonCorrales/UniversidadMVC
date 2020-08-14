@@ -18,8 +18,27 @@ class EstudianteController {
          require_once 'view/include/footer.php';
      }
      
+     public function mostrarRegistar(){
+         require_once 'view/include/header.php';
+         require_once 'view/estudiante/crear.php';
+         require_once 'view/include/footer.php';         
+     }
+     
      public function registrar(){
-         echo '<H1>Estoy en la pantalla de registrar</H1>';
+         //1. Obtener todos los datos del formulario por $_POST
+         $cedula = $_POST['cedula'];
+         $nombre = $_POST['nombre'];
+         $apellido = $_POST['apellido'];
+         $edad = $_POST['edad'];
+         
+         //2. Crear un objeto Estudiante y enviar a actualizar
+         $estudiante = new Estudiante($cedula,$nombre,$apellido,$edad);  
+         
+         //3. llamar al modelo para registar un Estudiante
+         $this->model->registrarEstudiante($estudiante);
+         
+         //4. redirección index.    
+         header("location:index.php");
      }
      
      public function editar(){

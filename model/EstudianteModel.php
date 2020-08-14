@@ -44,7 +44,19 @@ class EstudianteModel {
            return null;   
         }
     }
-        
+    
+    public function registrarEstudiante($estudiante){
+        $this->bd->getConeccion();
+        $sql="INSERT INTO ESTUDIANTES(CEDULA,NOMBRE,APELLIDO,EDAD) VALUES (?,?,?,?)";
+        $paramType= 'sssi';
+        $paramValue= array($estudiante->getCedula(),
+                           $estudiante->getNombre(),
+                           $estudiante->getApellido(),
+                           $estudiante->getEdad());
+        $registros = $this->bd->executeQuery($sql, $paramType, $paramValue);         
+        $this->bd->cerrarConeccion();
+    }    
+    
     public function actualizar($estudiante){
         $this->bd->getConeccion();        
         $sql="UPDATE ESTUDIANTES SET NOMBRE=?, APELLIDO=?, EDAD=? WHERE CEDULA=?";

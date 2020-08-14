@@ -23,18 +23,27 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Nuevo Registro <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                   <li><a href="#">Estudiante</a></li>
+                   <li><a href="index.php?controller=Estudiante&action=mostrarRegistar">Estudiante</a></li>
                 </ul>                
               </li>               
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Listar <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                    <li><a href="index.php?controller=Estudiante&action=listar">Estudiantes</a></li>
+                   <?php if(isset($_SESSION['usuarioLogueado'])): ?>
                    <li><a href="index.php?controller=Carrera&action=listar">Carreras</a></li>
+                   <?php endif;?>
                    <li><a href="index.php?controller=Curso&action=listar">Cursos</a></li>
                    <li><a href="index.php?controller=Profesor&action=listar">Profesores</a></li>
                 </ul>                
-              </li>              
+              </li>  
+              <li class="dropdown">
+                <?php if(isset($_SESSION['usuarioLogueado'])): ?>  
+                <a href="index.php?controller=Usuario&action=cerrarSesion" class="dropdown-toggle" role="button" aria-expanded="false">Cerrar Sesión</a>
+                <?php else:?>
+                <a href="index.php?controller=Usuario&action=mostrarLogin" class="dropdown-toggle" role="button" aria-expanded="false">Login</a>
+                <?php endif;?>
+              </li>               
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->        

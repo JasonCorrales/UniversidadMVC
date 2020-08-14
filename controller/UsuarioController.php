@@ -23,7 +23,20 @@ class UsuarioController {
           $_SESSION['usuarioLogueado'] = $usuario;
             header("location:index.php"); 
          }else{
-            header("location:index.php?controller=Usuario&action=MostrarLogin");    
+            header("location:index.php?controller=Usuario&action=mostrarLogin");    
          }
     }
+    
+    public function mostrarLogin(){
+        require_once 'view/include/header.php';
+        require_once 'view/usuario/login.php';
+        require_once 'view/include/footer.php';
+    }
+    
+    
+    public function cerrarSesion(){        
+        session_destroy();
+        header("location:index.php");        
+    }
+    
 }

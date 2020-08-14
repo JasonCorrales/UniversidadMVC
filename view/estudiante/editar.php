@@ -34,9 +34,7 @@
                         <input type="submit" class="btn btn-primary form-control" name="" value="actualizar">
                     </div>
                 </div>
-            </form>
-            
+            </form>            
         </div>
-    </div>
-    
+    </div>    
 </div>

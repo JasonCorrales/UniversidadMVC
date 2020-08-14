@@ -9,6 +9,8 @@ class CarreraController {
     }
     
     public function listar(){
+        
+        Util::estaLogueado();        
         require 'view/include/header.php';
         echo '<h1>Listado de Carreras</h1>';
         require 'view/include/footer.php';
