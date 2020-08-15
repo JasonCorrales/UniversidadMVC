@@ -26,5 +26,11 @@ class Util {
         }        
     }    
     
+    public static function mostarAlerta($mensaje){        
+            echo '<script type="text/javascript"> ';
+            echo ' alert("'.$mensaje.'");';
+            echo ' window.location.href="index.php";';
+            echo '</script>';
+    }
     
 }

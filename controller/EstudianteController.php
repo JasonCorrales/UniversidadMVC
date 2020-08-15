@@ -38,7 +38,8 @@ class EstudianteController {
          $this->model->registrarEstudiante($estudiante);
          
          //4. redirección index.    
-         header("location:index.php");
+         $mensaje= "El estudiante fue registrado de manera correcta!";
+         Util::mostarAlerta($mensaje);
      }
      
      public function editar(){
